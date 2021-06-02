@@ -4,7 +4,7 @@
   "author": "Noro Lex Studio",
   "version": "1.2.0",
   "repository": "https://github.com/NoroLexStudio/Noro-Lex-Studio-Bot",
-  "description": "A complete code to download for a music bot. Using a module (discord-player).",
+  "description": "",
   "scripts": {
     "start": "node index.js"
   },
