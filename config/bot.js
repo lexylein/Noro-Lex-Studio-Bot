@@ -11,9 +11,9 @@ module.exports = {
     },
 
     discord: {
-        token: 'ODQ0NDgxMzg2Nzc3MjgwNTIz.YKTClA.Npm58usv9cI6lL7e7K7BBafJNzU',
-        prefix: '!n ',
-        activity: '!n help // Version 1.5.0',
+        token: 'Bot Token',
+        prefix: 'Prefix',
+        activity: 'status',
      },
 
 
