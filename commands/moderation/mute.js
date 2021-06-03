@@ -1,8 +1,8 @@
 module.exports = {
-    name: 'userid',
+    name: 'mute',
     aliases: [],
     category: 'Moderation',
-    utilisation: '{prefix}userid [user]',    	
+    utilisation: '{prefix}mute [user]',    	
 
     execute(client, message) {
     	
