@@ -36,7 +36,7 @@ module.exports = {
                     return message.reply("You didn't specify a time!");
 
 ('addrole command')
-                return message.reply(`${message.mentions.users.first().username} has been muted for `);
+                return message.reply(`${message.mentions.users.first().username} has been muted`);
 
                 setTimeout(function () {
                     user.removeRole(muterole.id);
