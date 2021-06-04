@@ -2,7 +2,7 @@
   "name": "Noro-Lex-Studio-Bot",
   "main": "index.js",
   "author": "Noro Lex Studio",
-  "version": "1.2.0",
+  "version": "1.6.0",
   "repository": "https://github.com/NoroLexStudio/Noro-Lex-Studio-Bot",
   "description": "",
   "scripts": {
