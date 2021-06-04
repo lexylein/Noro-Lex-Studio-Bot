@@ -7,6 +7,6 @@ module.exports = {
     execute(client, message) {
       if (!message.member.hasPermission('ADMINISTRATOR'))
         return message.reply('You do not have permissions to use that command');
-        message.channel.send(`The Version of The Bot is: 1.5.0`);
+        message.channel.send(`The Version of The Bot is: 1.6.0`);
     },
 };
