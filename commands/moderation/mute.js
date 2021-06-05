@@ -25,27 +25,14 @@ module.exports = {
                 if (user.hasPermission("MANAGE_MESSAGES"))
                     return message.reply("Can't mute user!");
 
-                
+                    
+                    let role = message.guild.roles.cache.find(r => r.name === "Muted");
+                    
+                    let member = message.mentions.members.first();
 
-                
-                        
-                
 
-                let mutetime = args[1];
-                if (!mutetime)
-                    return message.reply("You didn't specify a time!");
-
-('addrole command')
-                return message.reply(`${message.mentions.users.first().username} has been muted`);
-
-                setTimeout(function () {
-                    user.removeRole(muterole.id);
-                    message.channel.send(`${message.mentions.users.first().username} has been unmuted!`);
-                }, ms(mutetime));
-    
-
-    
-  
+                member.roles.add(role).catch(console.error);
+                return message.reply(`${message.mentions.users.first().username} has been muted!`);
 
     }
 };
