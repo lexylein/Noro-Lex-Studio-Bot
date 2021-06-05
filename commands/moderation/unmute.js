@@ -23,7 +23,7 @@ module.exports = {
                 if (!user) return message.reply("Couldn't find user.");
 
                 if (user.hasPermission("MANAGE_MESSAGES"))
-                    return message.reply("Can't mute user!");
+                    return message.reply("Can't unmute user!");
 
                     
                     let verifiziert1 = message.guild.roles.cache.find(r => r.name === "Verifiziert");
