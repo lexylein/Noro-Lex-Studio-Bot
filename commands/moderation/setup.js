@@ -1,8 +1,8 @@
 module.exports = {
-    name: 'musicsetup',
+    name: 'setup',
     aliases: [],
     category: 'Moderation',
-    utilisation: '{prefix}musicsetup',
+    utilisation: '{prefix}setup',
 
     execute(client, message) {
        if (!message.member.hasPermission('ADMINISTRATOR'))
