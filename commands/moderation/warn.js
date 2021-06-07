@@ -4,7 +4,7 @@ module.exports = {
     name: 'warn',
     aliases: [],
     category: 'Moderation',
-    utilisation: '{prefix}warn [user] [reason]',
+    utilisation: '{prefix}warn [user] <reason>',
 
     execute(bot, message, args) {
         let warnPermErr = new MessageEmbed()
