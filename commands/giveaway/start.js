@@ -4,7 +4,7 @@ module.exports = {
     name: 'start',
     aliases: [],
     category: 'Giveaway',
-    utilisation: '{prefix}Start ',
+    utilisation: '{prefix}Start [channel] [duration] [no.winners] [prize]',
 
 execute(client, message, args) {
 
