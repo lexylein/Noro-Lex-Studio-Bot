@@ -2,6 +2,29 @@ const fs = require('fs');
 const discord = require('discord.js');
 const client = new discord.Client({ disableMentions: 'everyone' });
 
+
+const { GiveawaysManager } = require('discord-giveaways');
+client.giveawaysManager = new GiveawaysManager(client, {
+    storage: "./giveaways.json",
+    updateCountdownEvery: 5000,
+    default: {
+        botsCanWin: false,
+        embedColor: "#ff0000",
+        reaction: "🎉"
+    }
+});
+// We now have a client.giveawaysManager property to manage our giveaways!
+
+client.giveawaysManager.on("giveawayReactionAdded", (giveaway, member, reaction) => {
+});
+
+client.giveawaysManager.on("giveawayReactionRemoved", (giveaway, member, reaction) => {
+});
+
+client.giveawaysManager.on("giveawayEnded", (giveaway, winners) => {
+});
+
+
 const { Player } = require('discord-player');
 
 client.player = new Player(client);
