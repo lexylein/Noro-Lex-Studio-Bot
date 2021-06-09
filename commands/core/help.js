@@ -7,6 +7,7 @@ module.exports = {
     execute(client, message, args) {
         if (!args[0]) {
         	const fun = message.client.commands.filter(x => x.category == 'Fun').map((x) => '`' + x.name + '`').join(', ');
+        	const giveaway = message.client.commands.filter(x => x.category == 'Giveaway').map((x) => '`' + x.name + '`').join(', ');
             const moderation = message.client.commands.filter(x => x.category == 'Moderation').map((x) => '`' + x.name + '`').join(', ');
             const music = message.client.commands.filter(x => x.category == 'Music').map((x) => '`' + x.name + '`').join(', ');
 
@@ -16,8 +17,10 @@ module.exports = {
                     author: { name: 'Help pannel' },
                     footer: { text: 'This bot made by Noro Lex Studio (Noro Lex Studio Bot)' },
                     fields: [
-                    	{ name: '**Fun**', value: fun }
-                    	,
+                    	{ name: '**Fun**', value: fun },
+                    	
+                    	{ name: '**Giveaway**', value: giveaway },
+                    	
                         { name: '**Moderation**', value: moderation },
                         
                         { name: '**Music**', value: music },
