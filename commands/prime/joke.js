@@ -22,8 +22,10 @@ const jokes = [
 ];
 
 module.exports = {
-	name: 'joke',
-	description: 'tells you a joke',
+    name: 'joke',
+    aliases: [],
+    category: 'prime',
+    utilisation: '{prefix}joke',
 	execute(bot, message, args, client) {
 		
 		if(message.guild.id === "784348476220768280") return message.channel.send(jokes[Math.floor(Math.random() * jokes.length)]);
