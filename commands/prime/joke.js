@@ -28,11 +28,11 @@ module.exports = {
     utilisation: '{prefix}joke',
 	execute(bot, message, args, client) {
 		
-		if(message.guild.id === "784348476220768280") return message.channel.send(jokes[Math.floor(Math.random() * jokes.length)]);
+		if(message.guild.id === "server ID 1") return message.channel.send(jokes[Math.floor(Math.random() * jokes.length)]);
 		
-		if(message.guild.id === "836299465051996212") return message.channel.send(jokes[Math.floor(Math.random() * jokes.length)]);
+		if(message.guild.id === "server ID 2") return message.channel.send(jokes[Math.floor(Math.random() * jokes.length)]);
 		
-		if(message.guild.id === "770040861261430794") return message.channel.send(jokes[Math.floor(Math.random() * jokes.length)]);
+		if(message.guild.id === "server ID 3") return message.channel.send(jokes[Math.floor(Math.random() * jokes.length)]);
        
         message.channel.send('the server has no prime from the bot');
 }
