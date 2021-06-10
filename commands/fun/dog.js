@@ -1,13 +1,11 @@
 const superagent = require("snekfetch");
 const Discord = require('discord.js')
 
-
-
 module.exports = {
-  name: "dog",
-  category: "fun",
-description: "Sends a random dog image",
-usage: "[command]",
+    name: 'dog',
+    aliases: [],
+    category: 'fun',
+    utilisation: '{prefix}dog',
 execute(client, message, args) {
 //command
 superagent.get('https://nekos.life/api/v2/img/woof')
