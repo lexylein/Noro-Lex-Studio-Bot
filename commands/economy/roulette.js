@@ -1,14 +1,11 @@
 const { MessageEmbed } = require("discord.js");
 const db = require("quick.db");
 
-module.exports = {
-   
-        name: "roulette",
-        aliases: ["roul"],
-        category: "economy",
-        description: "Bet a colour to win or lose",
-        usage: "[colour]<amount>",
-        accessableby: "everyone",
+    module.exports = {
+    name: 'roulette',
+    aliases: [],
+    category: 'Economy',
+    utilisation: '{prefix}roulette [color] [amount]',
     execute(bot, message, args) {
         let prefix = "q"
         let fetched = db.fetch(`prefix_${message.guild.id}`);
