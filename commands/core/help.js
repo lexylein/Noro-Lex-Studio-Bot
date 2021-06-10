@@ -8,6 +8,7 @@ module.exports = {
         if (!args[0]) {
         	const fun = message.client.commands.filter(x => x.category == 'Fun').map((x) => '`' + x.name + '`').join(', ');
         	const giveaway = message.client.commands.filter(x => x.category == 'Giveaway').map((x) => '`' + x.name + '`').join(', ');
+            const economy = message.client.commands.filter(x => x.category == 'Economy').map((x) => '`' + x.name + '`').join(', ');
             const moderation = message.client.commands.filter(x => x.category == 'Moderation').map((x) => '`' + x.name + '`').join(', ');
             const music = message.client.commands.filter(x => x.category == 'Music').map((x) => '`' + x.name + '`').join(', ');
 
@@ -20,12 +21,14 @@ module.exports = {
                     	{ name: '**Fun**', value: fun },
                     	
                     	{ name: '**Giveaway**', value: giveaway },
-                    	
-                        { name: '**Moderation**', value: moderation },
                         
-                        { name: '**Music**', value: music },
+                        { name: '**Economy**', value: economy },
+
+                      { name: '**Moderation**', value: moderation },
                         
-                        { name: '**Filters**', value: client.filters.map((x) => '`' + x + '`').join(', ') },
+                      { name: '**Music**', value: music },
+                        
+                      { name: '**Filters**', value: client.filters.map((x) => '`' + x + '`').join(', ') },
                     ],
                     timestamp: new Date(),
                     description: `${client.emotes.success} - Support Server: https://discord.gg/GqT6fUt6z9`,
