@@ -15,11 +15,10 @@ module.exports = {
         let weekly = db.fetch(`weekly_${user.id}`);
 
         if (weekly !== null && timeout - (Date.now() - weekly) > 0) {
-            let time = ms(timeout - (Date.now() - weekly));
 
             let timeEmbed = new MessageEmbed()
                 .setColor("#ff0000")
-                .setDescription(`❌ You have already collected your weekly reward\n\nCollect it again in ${time.days}d ${time.hours}h ${time.minutes}m ${time.seconds}s `);
+                .setDescription(`❌ You have already collected your weekly reward\n\n`);
             message.channel.send(timeEmbed)
         } else {
             let moneyEmbed = new MessageEmbed()
