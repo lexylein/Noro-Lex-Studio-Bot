@@ -9,6 +9,7 @@ module.exports = {
         	const fun = message.client.commands.filter(x => x.category == 'Fun').map((x) => '`' + x.name + '`').join(', ');
         	const giveaway = message.client.commands.filter(x => x.category == 'Giveaway').map((x) => '`' + x.name + '`').join(', ');
             const economy = message.client.commands.filter(x => x.category == 'Economy').map((x) => '`' + x.name + '`').join(', ');
+		    const prime = message.client.commands.filter(x => x.category == 'Prime').map((x) => '`' + x.name + '`').join(', ');
             const moderation = message.client.commands.filter(x => x.category == 'Moderation').map((x) => '`' + x.name + '`').join(', ');
             const music = message.client.commands.filter(x => x.category == 'Music').map((x) => '`' + x.name + '`').join(', ');
 
@@ -22,7 +23,9 @@ module.exports = {
                     	
                     	{ name: '**Giveaway**', value: giveaway },
                         
-                        { name: '**Economy**', value: economy },
+                      { name: '**Economy**', value: economy },
+
+											 { name: '**Prime**', value: prime },
 
                       { name: '**Moderation**', value: moderation },
                         
