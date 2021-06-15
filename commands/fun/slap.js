@@ -1,8 +1,8 @@
 module.exports = {
-    name: 'slab',
+    name: 'slap',
     aliases: [],
     category: 'Fun',
-    utilisation: '{prefix}slab [user]',    	
+    utilisation: '{prefix}slap [user]',    	
 
     execute(client, message) {
 
