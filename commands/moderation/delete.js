@@ -1,32 +1,21 @@
 module.exports = {
-    name: 'add',
-    aliases: [],
+    name: 'delete',
+    aliases: ['del'],
     category: 'Moderation',
-    utilisation: '{prefix}add [User]',
-	execute(client, message, args, prefix) {
-        if (!message.member.hasPermission("ADMINISTRATOR")) {
+    utilisation: '{prefix}delete',
+	execute(client, message, args) {
+		           if (!message.member.hasPermission("BAN_MEMBERS")) {
                     return message.reply(
                         "You do not have the permission to use that command."
                     );
                 }
+		
 		if(message.channel.name.includes('ticket-')) {
-			const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(x => x.user.username === args.slice(0).join(' ') || x.user.username === args[0]);
-			if(!member) {
-				return message.channel.send(`Incorrect Usage! Correct Usage:${prefix}add <member>`);
-			}
-			try{
-				message.channel.updateOverwrite(member.user, {
-					VIEW_CHANNEL: true,
-					SEND_MESSAGES: true,
-					ATTACH_FILES: true,
-					READ_MESSAGE_HISTORY: true,
-				}).then(() => {
-					message.channel.send(`Successfully added ${member} to ${message.channel}`);
-				});
-			}
-			catch(e) {
-				return message.channel.send('An error occurred, please try again!');
-			}
+			message.channel.delete();
 		}
+		else {
+			return message.reply('you cannot use this command here. Please use this command when you want to delete a ticket.');
+		}
+		
 	},
 };
