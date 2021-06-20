@@ -1,8 +1,8 @@
 module.exports = {
-    name: 'delete',
+    name: 'close',
     aliases: ['del'],
     category: 'Moderation',
-    utilisation: '{prefix}delete',
+    utilisation: '{prefix}close',
 	execute(client, message, args) {
 		           if (!message.member.hasPermission("ADMINISTRATOR")) {
                     return message.reply(
