@@ -4,7 +4,7 @@ module.exports = {
     category: 'Moderation',
     utilisation: '{prefix}delete',
 	execute(client, message, args) {
-		           if (!message.member.hasPermission("BAN_MEMBERS")) {
+		           if (!message.member.hasPermission("ADMINISTRATOR")) {
                     return message.reply(
                         "You do not have the permission to use that command."
                     );
