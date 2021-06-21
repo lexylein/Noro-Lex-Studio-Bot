@@ -50,7 +50,6 @@ module.exports = {
                 member.roles.add(verifiziert1).catch(console.error);
                 member.roles.add(verifiziert2).catch(console.error);
                 member.roles.remove(mute).catch(console.error);
-                return message.reply(moderationEmbed);
 
         const LogChannel = message.guild.channels.cache.find(channel => channel.name === `bot-log`);
         
