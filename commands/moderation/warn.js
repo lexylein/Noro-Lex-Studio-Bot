@@ -34,8 +34,14 @@ module.exports = {
             .addField(`**Action:**`, `\`Warn\``)
             .addField(`**Moderator:**`, `${message.author}`)
 
-            message.channel.send(warnEmbed)
 
+
+        const LogChannel = message.guild.channels.cache.find(channel => channel.name === `bot-log`);
+        
+        const channel = LogChannel;
+        
+        channel.send(warnEmbed);
+        
     }
 };
 
