@@ -7,6 +7,7 @@ module.exports = {
     utilisation: '{prefix}warn [user] <reason>',
 
     execute(bot, message, args) {
+        
         let warnPermErr = new MessageEmbed()
         .setColor('#ff0000')
         .setTitle("**User Permission Error!**")
@@ -17,9 +18,9 @@ module.exports = {
             if(!member) return message.reply("Please mention a valid member of this server");
         
             let reason = args.slice(1).join(' ');
-            if(!reason) reason = "(No Reason Provided)";
+            if(!reason) reason = "No Reason Provided";
             
-            member.send(`You have been warned by ${message.author.username} for this reason: ${reason} on the server ${message.guild}`)
+            member.send(`You have been warned by **${message.author.username}** for this reason: **${reason}** on the server **${message.guild}**`)
             .catch(error => message.channel.send(`Sorry <${message.author}> I couldn't n't warn because of : ${error}`));
             let warnEmbed = new MessageEmbed()
             .setColor('#ff0000')
