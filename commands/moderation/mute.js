@@ -5,6 +5,10 @@ module.exports = {
     utilisation: '{prefix}mute [user]',    	
 
     execute(client, message, args) {
+        
+        if(!message.guild.channels.cache.find(channel => channel.name === `bot-log`)) {
+            return message.reply('you have not setup the server');
+        }
     	
     	if (!message.member.hasPermission("MANAGE_ROLES")) {
                     return message.reply(
@@ -38,7 +42,13 @@ module.exports = {
                 member.roles.remove(verifiziert1).catch(console.error);
                 member.roles.remove(verifiziert2).catch(console.error);
                 member.roles.add(mute).catch(console.error);
-                return message.reply(`${message.mentions.users.first().username} has been muted!`);
+        
+        const LogChannel = message.guild.channels.cache.find(channel => channel.name === `bot-log`);
+        
+        const channel = LogChannel;
+        
+        channel.send(`${message.mentions.users.first().username} has been muted by ${message.author.username}!`);
 
     }
 };
+
