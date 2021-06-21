@@ -28,7 +28,7 @@ module.exports = {
             .catch(error => message.channel.send(`Sorry <${message.author}> I couldn't n't unwarn because of : ${error}`));
             let warnEmbed = new MessageEmbed()
             .setColor('#ff0000')
-            .setTitle("**__Warn Report__**")
+            .setTitle("**__Moderation System__**")
             .setDescription(`**<@${member.user.id}> has been unwarned by <@${message.author.id}>**`)
             .addField(`**Action:**`, `\`unwarn\``)
             .addField(`**Moderator:**`, `${message.author}`)
