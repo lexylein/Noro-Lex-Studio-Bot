@@ -21,11 +21,11 @@ module.exports = {
             if(!reason) reason = "No Reason Provided";
             
             member.send(`You have been unwarned by **${message.author.username}** on the server **${message.guild}**`)
-            .catch(error => message.channel.send(`Sorry <${message.author}> I couldn't n't warn because of : ${error}`));
+            .catch(error => message.channel.send(`Sorry <${message.author}> I couldn't n't unwarn because of : ${error}`));
             let warnEmbed = new MessageEmbed()
             .setColor('#ff0000')
             .setTitle("**__Warn Report__**")
-            .setDescription(`**<@${member.user.id}> has been warned by <@${message.author.id}>**`)
+            .setDescription(`**<@${member.user.id}> has been unwarned by <@${message.author.id}>**`)
             .addField(`**Action:**`, `\`unwarn\``)
             .addField(`**Moderator:**`, `${message.author}`)
 
