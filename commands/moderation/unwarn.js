@@ -8,6 +8,10 @@ module.exports = {
 
     execute(bot, message, args) {
         
+        if(!message.guild.channels.cache.find(channel => channel.name === `bot-log`)) {
+            return message.reply('you have not setup the server');
+        }
+        
         let warnPermErr = new MessageEmbed()
         .setColor('#ff0000')
         .setTitle("**User Permission Error!**")
@@ -29,7 +33,12 @@ module.exports = {
             .addField(`**Action:**`, `\`unwarn\``)
             .addField(`**Moderator:**`, `${message.author}`)
 
-            message.channel.send(warnEmbed)
+        
+        const LogChannel = message.guild.channels.cache.find(channel => channel.name === `bot-log`);
+        
+        const channel = LogChannel;
+        
+        channel.send(warnEmbed);
 
     }
 };
