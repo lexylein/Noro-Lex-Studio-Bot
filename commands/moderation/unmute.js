@@ -5,6 +5,10 @@ module.exports = {
     utilisation: '{prefix}unmute [user]',    	
 
     execute(client, message, args) {
+        
+        if(!message.guild.channels.cache.find(channel => channel.name === `bot-log`)) {
+            return message.reply('you have not setup the server');
+        }
     	
     	if (!message.member.hasPermission("MANAGE_ROLES")) {
                     return message.reply(
@@ -34,11 +38,24 @@ module.exports = {
                     
                     let member = message.mentions.members.first();
 
+        let moderationEmbed = new MessageEmbed()
+            .setColor('#ff0000')
+            .setTitle("**__Moderation System__**")
+            .setDescription(`**<@${member.user.id}> has been unmuted by <@${message.author.id}>**`)
+            .addField(`**Action:**`, `\`unwarn\``)
+            .addField(`**Moderator:**`, `${message.author}`)
 
                 member.roles.add(verifiziert1).catch(console.error);
                 member.roles.add(verifiziert2).catch(console.error);
                 member.roles.remove(mute).catch(console.error);
-                return message.reply(`${message.mentions.users.first().username} has been unmuted!`);
+                return message.reply(moderationEmbed);
 
+        const LogChannel = message.guild.channels.cache.find(channel => channel.name === `bot-log`);
+        
+        const channel = LogChannel;
+        
+        channel.send(moderationEmbed);
+        
     }
 };
+
