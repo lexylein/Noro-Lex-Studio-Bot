@@ -28,7 +28,7 @@ module.exports = {
             .catch(error => message.channel.send(`Sorry <${message.author}> I couldn't n't warn because of : ${error}`));
             let warnEmbed = new MessageEmbed()
             .setColor('#ff0000')
-            .setTitle("**__Warn Report__**")
+            .setTitle("**__Moderation System__**")
             .setDescription(`**<@${member.user.id}> has been warned by <@${message.author.id}>**`)
             .addField(`**Reason:**`, `\`${reason}\``)
             .addField(`**Action:**`, `\`Warn\``)
