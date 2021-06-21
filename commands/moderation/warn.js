@@ -8,6 +8,10 @@ module.exports = {
 
     execute(bot, message, args) {
         
+        if(!message.guild.channels.cache.find(channel => channel.name === `bot-log`)) {
+            return message.reply('you have not setup the server');
+        }
+        
         let warnPermErr = new MessageEmbed()
         .setColor('#ff0000')
         .setTitle("**User Permission Error!**")
