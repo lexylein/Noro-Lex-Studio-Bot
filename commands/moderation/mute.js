@@ -42,7 +42,7 @@ let moderationEmbed = new MessageEmbed()
             .setColor('#ff0000')
             .setTitle("**__Moderation System__**")
             .setDescription(`**<@${member.user.id}> has been muted by <@${message.author.id}>**`)
-            .addField(`**Action:**`, `\`unwarn\``)
+            .addField(`**Action:**`, `\`mute\``)
             .addField(`**Moderator:**`, `${message.author}`)
         
         
