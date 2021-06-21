@@ -38,7 +38,14 @@ module.exports = {
                     
                     let member = message.mentions.members.first();
 
-
+let moderationEmbed = new MessageEmbed()
+            .setColor('#ff0000')
+            .setTitle("**__Moderation System__**")
+            .setDescription(`**<@${member.user.id}> has been muted by <@${message.author.id}>**`)
+            .addField(`**Action:**`, `\`unwarn\``)
+            .addField(`**Moderator:**`, `${message.author}`)
+        
+        
                 member.roles.remove(verifiziert1).catch(console.error);
                 member.roles.remove(verifiziert2).catch(console.error);
                 member.roles.add(mute).catch(console.error);
@@ -47,7 +54,7 @@ module.exports = {
         
         const channel = LogChannel;
         
-        channel.send(`${message.mentions.users.first().username} has been muted by ${message.author.username}!`);
+        channel.send(moderationEmbed);
 
     }
 };
