@@ -42,7 +42,7 @@ module.exports = {
             .setColor('#ff0000')
             .setTitle("**__Moderation System__**")
             .setDescription(`**<@${member.user.id}> has been unmuted by <@${message.author.id}>**`)
-            .addField(`**Action:**`, `\`unwarn\``)
+            .addField(`**Action:**`, `\`unmute\``)
             .addField(`**Moderator:**`, `${message.author}`)
 
                 member.roles.add(verifiziert1).catch(console.error);
