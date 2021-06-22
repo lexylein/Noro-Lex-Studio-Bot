@@ -10,7 +10,7 @@ module.exports = {
 
         let user = message.author;
         let timeout = 604800000;
-        let amount = 5000;
+        let amount = 2000;
 
         let weekly = db.fetch(`weekly_${user.id}`);
 
