@@ -4,7 +4,7 @@ const client = new discord.Client({ disableMentions: 'everyone' });
 
 client.on("message", (message) => {
     
-    if (message.author.id === ("bot id")) return message.channel.send()
+    if (message.author.id === ("bot id")) return message.channel.send
     
     if (message.channel.type === "dm") { 
         
