@@ -39,7 +39,7 @@ const db = require("quick.db");
 
         let colorbad = new MessageEmbed()
             .setColor("#ff0000")
-            .setDescription(`❌ Specify a color | Red [1.5x] (normal) Black [2x] (hard) Green [15x](rare)`);
+            .setDescription(`❌ Specify a color | Red [1.5x] (normal) Black [2x] (hard) Green [15x] (very hard)`);
 
         if (!colour) return message.channel.send(colorbad);
         colour = colour.toLowerCase()
