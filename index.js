@@ -8,7 +8,7 @@ client.on("message", (message) => {
     
     if (message.channel.type === "dm") { 
         
-    message.channel.send('hallo')
+    message.channel.send('hello')
         
     }
     
