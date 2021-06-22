@@ -2,6 +2,17 @@ const fs = require('fs');
 const discord = require('discord.js');
 const client = new discord.Client({ disableMentions: 'everyone' });
 
+client.on("message", (message) => {
+    
+    if (message.author.id === ("bot id")) return message.channel.send()
+    
+    if (message.channel.type === "dm") { 
+        
+    message.channel.send('hallo')
+        
+    }
+    
+});
 
 const { GiveawaysManager } = require('discord-giveaways');
 client.giveawaysManager = new GiveawaysManager(client, {
