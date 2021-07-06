@@ -19,17 +19,17 @@ module.exports = {
       ) ||
       message.member;
 
-    let bal = db.fetch(`money_${user.id}`);
+    let bal = db.fetch(`money_${message.guild.id}_${user.id}`);
 
     if (bal === null) bal = 0;
 
-    let bank = db.fetch(`bank_${user.id}`);
+    let bank = db.fetch(`bank_${message.guild.id}_${user.id}`);
 
     if (bank === null) bank = 0;
 let Total = bal + bank
     if (user) {
       let moneyEmbed = new MessageEmbed()
-        .setColor("BLUE")
+        .setColor("#ff0000")
         .setDescription(
           `**${user.user.username}'s Balance**\n**Cash:** ${bal}$\n**Bank:** ${bank}\n**Total:** ${Total}`
         );
