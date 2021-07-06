@@ -21,7 +21,7 @@ try {
       );
     if (!user) return message.channel.send("**Enter A Valid User!**");
 
-    let member = db.fetch(`money_${user2.id}`);
+    let member = db.fetch(`money_${message.guild.id}_${user2.id}`);
 
     let embed1 = new MessageEmbed()
       .setColor("#ff0000")
@@ -65,8 +65,8 @@ try {
       .setDescription(`✅ You have payed ${user.displayName} ${args[1]} coins`);
 
     message.channel.send(embed6);
-    db.add(`money_${user.id}`, args[1]);
-    db.subtract(`money_${user2.id}`, args[1]);
+    db.add(`money_${message.guild.id}_${user.id}`, args[1]);
+    db.subtract(`money_${message.guild.id}_${user2.id}`, args[1]);
     } catch {
         
     }
