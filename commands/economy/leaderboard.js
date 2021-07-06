@@ -26,7 +26,7 @@ module.exports = {
         };
 
         const embed = new MessageEmbed()
-            .setTitle(`Leaderboard from all servers`)
+            .setTitle(`Leaderboard`)
             .setColor("#ff0000")
             .setDescription(finalLb)
             .setFooter(bot.user.tag, bot.user.displayAvatarURL())
