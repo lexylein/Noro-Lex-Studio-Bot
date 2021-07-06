@@ -9,7 +9,7 @@ module.exports = {
         
     execute(bot, message, args) {
     	
-        let money = db.all().filter(data => data.ID.startsWith(`money_${message.guild.id}_`)).sort((a, b) => b.data - a.data);
+        let money = db.all().filter(data => data.ID.startsWith(`money_`)).sort((a, b) => b.data - a.data);
         if (!money.length) {
             let noEmbed = new MessageEmbed()
                 .setAuthor(message.member.displayName, message.author.displayAvatarURL())
@@ -26,11 +26,12 @@ module.exports = {
         };
 
         const embed = new MessageEmbed()
-            .setTitle(`Leaderboard`)
-            .setColor("GREEN")
+            .setTitle(`Leaderboard from all servers`)
+            .setColor("#ff0000")
             .setDescription(finalLb)
             .setFooter(bot.user.tag, bot.user.displayAvatarURL())
             .setTimestamp()
         message.channel.send(embed);
     }
 };
+
