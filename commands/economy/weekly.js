@@ -12,7 +12,7 @@ module.exports = {
         let timeout = 604800000;
         let amount = 2000;
 
-        let weekly = db.fetch(`weekly_${user.id}`);
+        let weekly = db.fetch(`weekly_${message.guild.id}_${user.id}`);
 
         if (weekly !== null && timeout - (Date.now() - weekly) > 0) {
 
@@ -25,8 +25,8 @@ module.exports = {
                 .setColor("#ff0000")
                 .setDescription(`✅ You've collected your weekly reward of ${amount} coins`); 
             message.channel.send(moneyEmbed)
-            db.add(`money_${user.id}`, amount)
-            db.set(`weekly_${user.id}`, Date.now())
+            db.add(`money_${message.guild.id}_${user.id}`, amount)
+            db.set(`weekly_${message.guild.id}_${user.id}`, Date.now())
 
 
         }
