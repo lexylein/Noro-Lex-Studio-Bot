@@ -10,16 +10,16 @@ module.exports = {
     execute(bot, message, args) {
         let user = message.author;
 
-        let member2 = db.fetch(`bank_${user.id}`)
+        let member2 = db.fetch(`bank_${message.guild.id}_${user.id}`)
 
         if (args.join(' ').toLocaleLowerCase() == 'all') {
-            let money = db.fetch(`bank_${user.id}`)
+            let money = db.fetch(`bank_${message.guild.id}_${user.id}`)
             let embed = new MessageEmbed()
               .setColor("#ff0000")
               .setDescription(`❌**You Do Not Have Any Money To Withdraw!**`)
             if (!money) return message.channel.send(embed)
-            db.subtract(`bank_${user.id}`, money)
-            db.add(`money_${user.id}`, money)
+            db.subtract(`bank_${message.guild.id}_${user.id}`, money)
+            db.add(`money_${message.guild.id}_${user.id}`, money)
             let embed5 = new MessageEmbed()
                 .setColor("#ff0000")
                 .setDescription(`✅ You have withdrawn all your coins from your bank`); 
@@ -61,8 +61,8 @@ module.exports = {
                 .setDescription(`✅ You have withdrawn ${args[0]} coins from your bank!`);
 
             message.channel.send(embed5)
-            db.subtract(`bank_${user.id}`, args[0])
-            db.add(`money_${user.id}`, args[0])
+            db.subtract(`bank_${message.guild.id}_${user.id}`, args[0])
+            db.add(`money_${message.guild.id}_${user.id}`, args[0])
         }
     }
 };
