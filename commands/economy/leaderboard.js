@@ -3,13 +3,13 @@ const db = require('quick.db');
 
 module.exports = {
     name: 'leaderboard',
-    aliases: ['lb'],
+    aliases: ['top'],
     category: 'Economy',
     utilisation: '{prefix}leaderboard',
         
     execute(bot, message, args) {
     	
-        let money = db.all().filter(data => data.ID.startsWith(`money_`)).sort((a, b) => b.data - a.data);
+        let money = db.all().filter(data => data.ID.startsWith(`money_${message.guild.id}_`)).sort((a, b) => b.data - a.data);
         if (!money.length) {
             let noEmbed = new MessageEmbed()
                 .setAuthor(message.member.displayName, message.author.displayAvatarURL())
@@ -26,7 +26,7 @@ module.exports = {
         };
 
         const embed = new MessageEmbed()
-            .setTitle(`Leaderboard Of ${message.guild.name}`)
+            .setTitle(`Leaderboard`)
             .setColor("GREEN")
             .setDescription(finalLb)
             .setFooter(bot.user.tag, bot.user.displayAvatarURL())
