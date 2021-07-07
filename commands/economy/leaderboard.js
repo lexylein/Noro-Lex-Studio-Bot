@@ -1,37 +1,21 @@
-const { MessageEmbed } = require('discord.js');
-const db = require('quick.db');
+const { MessageEmbed } = require("discord.js");
 
 module.exports = {
     name: 'leaderboard',
     aliases: ['top'],
     category: 'Economy',
     utilisation: '{prefix}leaderboard',
-        
-    execute(bot, message, args) {
-    	
-        let money = db.all().filter(data => data.ID.startsWith(`money_`)).sort((a, b) => b.data - a.data);
-        if (!money.length) {
-            let noEmbed = new MessageEmbed()
-                .setAuthor(message.member.displayName, message.author.displayAvatarURL())
-                .setColor("#ff0000")
-                .setFooter("Nothing To See Here Yet!")
-            return message.channel.send(noEmbed)
-        };
-
-        money.length = 10;
-        var finalLb = "";
-        for (var i in money) {
-            if (money[i].data === null) money[i].data = 0
-            finalLb += `**${money.indexOf(money[i]) + 1}. ${bot.users.cache.get(money[i].ID.split('_')[1]) ? bot.users.cache.get(money[i].ID.split('_')[1]).tag : "Unknown User#0000"}** - ${money[i].data} :dollar:\n`;
-        };
-
-        const embed = new MessageEmbed()
-            .setTitle(`Leaderboard`)
-            .setColor("#ff0000")
-            .setDescription(finalLb)
-            .setFooter(bot.user.tag, bot.user.displayAvatarURL())
-            .setTimestamp()
-        message.channel.send(embed);
-    }
-};
-
+execute(client, message, args) {
+   
+    let leaderboard = client.eco.leaderboard({ limit: 15, raw: false });
+    if (!leaderboard || leaderboard.length < 1) return message.channel.send("❌ | Empty Leaderboard!");
+    const embed = new MessageEmbed()
+        .setAuthor(`Leaderboard of ${message.guild.name}!`, message.guild.iconURL)
+        .setColor("#ff0000")
+        .setThumbnail(client.users.cache.get(leaderboard[0].id) ? client.users.cache.get(leaderboard[0].id).displayAvatarURL : "https://cdn.discordapp.com/avatars/603948445362946084/a_f61398e073d78ae104e32b0517c891c3.gif")
+        .setTimestamp();
+    leaderboard.forEach(u => {
+        embed.addField(`${u.position}. ${client.users.cache.get(u.id) ? client.users.cache.get(u.id).tag : "Unknown#0000"}`, `${u.money} 💸`);
+    });
+    return message.channel.send(embed);
+}};
