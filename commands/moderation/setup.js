@@ -7,11 +7,11 @@ module.exports = {
     execute(client, message) {
        if (!message.member.hasPermission('ADMINISTRATOR'))
         return message.reply('You do not have permissions to use that command');
-				 message.member.send(`Please move the role ** Noro Lex Studio Bot ** in first place in the order of the roles top, create a ** Music ** role for use a music commands and create a ** Muted ** role fpr mute user`); 
 				 
 				if(message.guild.channels.cache.find(channel => channel.name === `bot-log`)) {
             return message.reply('you already have setup the server');
         }
+        
 				 message.guild.channels.create(`Bot-Log`, {
             permissionOverwrites: [
                 {
@@ -24,5 +24,20 @@ module.exports = {
             message.reply('you have successfully setup the server')
 				 
     })
+        
+        message.guild.roles.create({
+        data: {
+          name: "Muted",
+          color: "#c2d3e0",
+          permissions: []
+        }})
+        
+        message.guild.roles.create({
+        data: {
+          name: "Music",
+          color: "#c2d3e0",
+          permissions: ['EMBED_LINKS', 'USE_EXTERNAL_EMOJIS', 'VIEW_CHANNEL', 'ADD_REACTIONS', 'STREAM', 'SEND_MESSAGES', 'SEND_TTS_MESSAGES', 'CONNECT', 'SPEAK', 'CHANGE_NICKNAME',]
+        }})
+        
 }};
 
