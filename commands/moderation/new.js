@@ -8,7 +8,7 @@ module.exports = {
 	execute(client, message, args, prefix) {
         
         if(!message.guild.channels.cache.find(channel => channel.name === `bot-log`)) {
-            return message.reply('you have not setup the server');
+            return message.reply('you have not setup the server use ```!n setup```');
         }
         
 		if(message.guild.channels.cache.find(channel => channel.name === `ticket-${message.author.id}`)) {
