@@ -7,7 +7,7 @@ const db = require("quick.db");
     category: 'Economy',
     utilisation: '{prefix}roulette [color] [amount]',
     execute(bot, message, args) {
-        let prefix = "q"
+        let prefix = "!n "
         let fetched = db.fetch(`prefix_${message.guild.id}`);
 
         if (fetched === null) {
@@ -79,6 +79,6 @@ const db = require("quick.db");
                 .setDescription(`❌ You lost ${money} coins\n\nMultiplier: 0x`);
             message.channel.send(moneyEmbed4)
         }
-          db.add(`games_${message.guild.id}_${user.id}`, 1)
+          db.add(`money_${message.guild.id}_${user.id}`, money)
     }
 };
