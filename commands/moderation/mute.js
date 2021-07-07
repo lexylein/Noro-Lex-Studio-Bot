@@ -9,7 +9,7 @@ module.exports = {
     execute(client, message, args) {
         
         if(!message.guild.channels.cache.find(channel => channel.name === `bot-log`)) {
-            return message.reply('you have not setup the server');
+            return message.reply('have not setup the server use ```!n setup```');
         }
     	
     	if (!message.member.hasPermission("MANAGE_ROLES")) {
