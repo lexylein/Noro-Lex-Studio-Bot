@@ -30,11 +30,6 @@ module.exports = {
 
                 if (user.hasPermission("MANAGE_MESSAGES"))
                     return message.reply("Can't mute user!");
-
-                    
-                    let verifiziert1 = message.guild.roles.cache.find(r => r.name === "Verifiziert");
-                    
-                    let verifiziert2 = message.guild.roles.cache.find(r => r.name === "verifiziert");
                     
                     let mute = message.guild.roles.cache.find(r => r.name === "Muted");
                     
@@ -47,9 +42,6 @@ let moderationEmbed = new MessageEmbed()
             .addField(`**Action:**`, `\`mute\``)
             .addField(`**Moderator:**`, `${message.author}`)
         
-        
-                member.roles.remove(verifiziert1).catch(console.error);
-                member.roles.remove(verifiziert2).catch(console.error);
                 member.roles.add(mute).catch(console.error);
         
         const LogChannel = message.guild.channels.cache.find(channel => channel.name === `bot-log`);
