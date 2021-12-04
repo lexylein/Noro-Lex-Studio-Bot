@@ -7,3 +7,4 @@
  - memes
  - jokes
  - cat/dog pictures
+ - giveaway
