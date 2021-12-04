@@ -1,5 +1,5 @@
 # Noro-Lex-Studio-Bot
- funktions:
+ **funktions:**
  - music
  - moderation
  - economy
