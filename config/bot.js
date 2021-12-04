@@ -13,7 +13,7 @@ module.exports = {
     discord: {
         token: '{Your Discord Bot Token}',
         prefix: '{Your Prefix}',
-		activity: '{Your Prefix} help // Version 1.11.4',
+		activity: '{Your Prefix} help // Version 1.12.3',
      },
 
 
