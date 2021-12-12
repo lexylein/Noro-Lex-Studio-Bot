@@ -5,6 +5,6 @@ module.exports = {
     utilisation: '{prefix}version',
 
     execute(client, message) {
-        message.channel.send(`The Version of The Bot is: 1.12.3`);
+        message.channel.send(`The Version of The Bot is: 1.12.4`);
     },
 };
