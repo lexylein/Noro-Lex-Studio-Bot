@@ -21,8 +21,18 @@ module.exports = {
             ],
             type: 'text',
         }).then(async channel => {
-            message.reply('you have successfully setup the server')
-				 
+            message.reply('you have successfully setup the server') 
+    })
+        
+        				 message.guild.channels.create(`welcome`, {
+            permissionOverwrites: [
+                {
+                    id: message.guild.roles.everyone,
+                    deny: ['SEND_MESSAGES'],
+                },
+            ],
+            type: 'text',
+        }).then(async channel => {
     })
         
         message.guild.roles.create({
@@ -36,7 +46,14 @@ module.exports = {
         data: {
           name: "Music",
           color: "#c2d3e0",
-          permissions: ['EMBED_LINKS', 'USE_EXTERNAL_EMOJIS', 'VIEW_CHANNEL', 'ADD_REACTIONS', 'STREAM', 'SEND_MESSAGES', 'SEND_TTS_MESSAGES', 'CONNECT', 'SPEAK', 'CHANGE_NICKNAME',]
+          permissions: ['EMBED_LINKS', 'USE_EXTERNAL_EMOJIS', 'VIEW_CHANNEL', 'ADD_REACTIONS', 'STREAM', 'SEND_MESSAGES', 'SEND_TTS_MESSAGES', 'CONNECT', 'SPEAK',]
+        }})
+        
+                message.guild.roles.create({
+        data: {
+          name: "Member",
+          color: "#c2d3e0",
+          permissions: ['EMBED_LINKS', 'USE_EXTERNAL_EMOJIS', 'VIEW_CHANNEL', 'ADD_REACTIONS', 'STREAM', 'SEND_MESSAGES', 'SEND_TTS_MESSAGES', 'CONNECT', 'SPEAK',]
         }})
         
 }};
