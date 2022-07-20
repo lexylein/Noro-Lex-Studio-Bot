@@ -9,6 +9,11 @@
  - cat/dog pictures
  - giveaway
  - owner commands
+ - global level system (next update)
+ - multiple languages (next update)
+
+**languages**
+ - English
   
  **Support:**
  - Discord Server: https://discord.gg/FCJY3W5nBS
