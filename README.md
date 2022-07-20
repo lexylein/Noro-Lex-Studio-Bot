@@ -1,21 +1,22 @@
 # Noro-Lex-Studio-Bot
  **funktions:**
- - music
+ - music system
  - moderation system
- - economy
+ - economy system
  - youtube togehter (Discord blocked)
  - memes
  - jokes
  - cat/dog pictures
- - giveaway
+ - giveaway system
  - owner commands
  - global level system (next update)
+ - level system (next update)
  - multiple languages (next update)
+ - custom welcome / level message for Premium servers
 
 **languages:**
  - English
- - german (next update)
-  
+
  **Support:**
  - Discord Server: https://discord.gg/FCJY3W5nBS
  - Discord: Noro_Lex#3814
