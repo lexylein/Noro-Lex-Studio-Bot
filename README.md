@@ -1,9 +1,9 @@
 # Noro-Lex-Studio-Bot
  **funktions:**
  - music
- - moderation
+ - moderation system
  - economy
- - youtube togehter
+ - youtube togehter (Discord blocked)
  - memes
  - jokes
  - cat/dog pictures
