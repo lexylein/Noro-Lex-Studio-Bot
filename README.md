@@ -14,6 +14,7 @@
 
 **languages:**
  - English
+ - german (next update)
   
  **Support:**
  - Discord Server: https://discord.gg/FCJY3W5nBS
