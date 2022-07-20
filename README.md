@@ -11,7 +11,7 @@
  - owner commands
   
  **Support:**
- - Discord Server: https://discord.gg/GqT6fUt6z9
+ - Discord Server: https://discord.gg/FCJY3W5nBS
  - Discord: Noro_Lex#3814
  - YouTube: Noro Lex 
  - Twitch: noro_lex_live
