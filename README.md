@@ -12,7 +12,7 @@
  - global level system (next update)
  - multiple languages (next update)
 
-**languages**
+**languages:**
  - English
   
  **Support:**
