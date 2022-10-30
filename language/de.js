@@ -1,0 +1,47 @@
+module.exports= {
+	
+	// SETLANG COMMAND //
+    SETLANG_ERR: "Bitte gib eine neue Sprache zur Auswahl an",
+    SETLANG_SUCCESS:[
+        "Die Sprache ist jetzt Deutsch",
+        "The language is now english",
+    ],
+	
+    No_Owner: `Du bist nicht der Besitzer von diesem bot`,
+	No_Prime: `Dieser Server hat kein Premium`,
+	No_Permission: `[USER], Du bist nicht berechtigt diesen Command zu benutzen`,
+	Cat: `Zufällige Katze`,
+	Dog: `🤣Was ein Hund🤣`,
+	MENTION_BOT: `Ich bin <name> und mein Präfix ist \`<prefix>\``,
+	INFO: `Dieser Bot wude von Noro Lex Studio gemacht (Noro Lex Studio Bot)`,
+	NSFW: `Dieser Kanal ist kein NSFW-Kanal.`,
+	
+	joke1: `Welche Rockgruppe hat vier Männer, die nicht singen? Mount Rushmore.`,
+	joke2: `Als ich ein Kind war, sagte mir meine Mutter, ich könnte jeder sein, der ich sein wollte. Es stellt sich heraus, dass Identitätsdiebstahl ein Verbrechen ist.`,
+	joke3: `Ein Typ geht zu seinem Arzt, weil er in die Zukunft sehen kann. Der Arzt fragt ihn: "Wie lange leiden Sie schon unter diesem Zustand?" Der Typ sagt zu ihm: "Seit nächsten Montag."`,
+	joke4: `Was essen Sprinter vor einem Rennen? Nichts, sie fasten!`,
+	joke5: `Welches Konzert kostet nur 45 Cent? 50 Cent mit Nickelback!`,
+	joke6: `Wie nennt man einen Mac 'n' Cheese, der einem um die Ohren fliegt? Zu nah für Comfort Food!`,
+	joke7: `Warum konnte das Fahrrad nicht von alleine stehen? Es war zwei müde!`,
+	joke8: `Haben Sie schon vom Restaurant auf dem Mond gehört? Tolles Essen, keine Atmosphäre!`,
+	joke9: `Wie viele Äpfel wachsen an einem Baum? Alle von ihnen!`,
+	joke10: `Haben Sie das Gerücht über Butter gehört? Nun, ich werde es nicht verbreiten!`,
+	joke11: `Ich erzähle Dad gerne Witze. Manchmal lacht er!`,
+	joke12: `An denjenigen, der meine Kopie von Microsoft Office gestohlen hat, ich werde Sie finden. Du hast mein Wort!`,
+	joke13: `Dev1 How do you comfort a JavaScript bug? Dev2 You console it`,
+	joke14: `Wenn ein JavaScript-Date schief gelaufen ist, "Rufen Sie mich nicht an, ich rufe Sie zurück. Versprochen!"`,
+	joke15: `Dev1 sah eine seltsame JavaScript-Funktion und fragte: "Was ist das?". Dev2 antwortete: „Ich weiß es nicht. Ich hätte dich angerufen, aber ich war in der Klemme.“`,
+	joke16: `Dev1 Warum war der JavaScript-Entwickler traurig? Dev2 Weil er nicht wusste, wie er sich ausdrücken sollte`,
+	joke17: `Dev1 Warum hat Jason sich mit Luftpolsterfolie bedeckt? Dev2 Weil er eine domänenübergreifende JSONP-Anfrage stellen wollte`,
+	joke18: `Dev1 Warum verirrte sich der CoffeeScript-Entwickler immer wieder? Dev2 Weil er seine Quelle ohne Karte nicht finden konnte`,
+	joke19: `Dev1 Warum ist der Entwickler pleite gegangen? Dev2 Weil er seinen ganzen Cache aufgebraucht hat`,
+	joke20: `Dev1 Warum ist der JavaScript-Boxer zum Chiropraktiker gegangen? Dev2 Weil sein Rückgrat nach einem Knockout eckig war und Aufmerksamkeit erforderte`,
+
+	Prime: `Premium:`,
+	LC: `Verlassens Kanal:`,
+	LM: `Verlassens Naricht:`,
+	JC: `beitritts Kanal:`,
+	JM: `beitritts Naricht:`,
+	JR: `beitritts Rolle:`,
+	Language: `Sprache:`,
+}

@@ -29,7 +29,7 @@ module.exports = {
         embed.setDescription(`Current playing: ${client.player.getQueue(message).playing.title}\n\n${tracks.slice(0, 5).join('\n')}\n\n${nextSongs}`);
 
         embed.setTimestamp();
-        embed.setFooter('This bot made by Noro Lex Studio (Noro Lex Studio Bot)', message.author.avatarURL({ dynamic: true }));
+        embed.setFooter(client.language.INFO, message.author.avatarURL({ dynamic: true }));
 
         message.channel.send(embed);
     },

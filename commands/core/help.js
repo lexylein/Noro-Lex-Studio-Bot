@@ -1,60 +1,72 @@
+const { MessageEmbed } = require('discord.js');
+
 module.exports = {
     name: 'help',
-    aliases: ['h'],
+    aliases: [],
     category: 'Core',
-    utilisation: '{prefix}help <command name>',
-
-    execute(client, message, args) {
-        if (!args[0]) {
-        	const fun = message.client.commands.filter(x => x.category == 'Fun').map((x) => '`' + x.name + '`').join(', ');
-        	const giveaway = message.client.commands.filter(x => x.category == 'Giveaway').map((x) => '`' + x.name + '`').join(', ');
-            const economy = message.client.commands.filter(x => x.category == 'Economy').map((x) => '`' + x.name + '`').join(', ');
-						const prime = message.client.commands.filter(x => x.category == 'Prime').map((x) => '`' + x.name + '`').join(', ');
-            const moderation = message.client.commands.filter(x => x.category == 'Moderation').map((x) => '`' + x.name + '`').join(', ');
-            const music = message.client.commands.filter(x => x.category == 'Music').map((x) => '`' + x.name + '`').join(', ');
-            
-            message.channel.send({
-                embed: {
-                    color: '#ff0000',
-                    author: { name: 'Help pannel' },
-                    footer: { text: 'This bot made by Noro Lex Studio (Noro Lex Studio Bot)' },
-                    fields: [
-                      { name: '**Fun**', value: fun },
-                    	
-                      { name: '**Giveaway**', value: giveaway },
-                        
-                      { name: '**Economy**', value: economy },
-
-					  { name: '**Prime**', value: prime },
-
-                      { name: '**Moderation**', value: moderation },
-                        
-                      { name: '**Music**', value: music },
-                    ],
-                    timestamp: new Date(),
-                    description: `${client.emotes.success} - Support Server: https://discord.gg/GqT6fUt6z9`,
-                },
-            });
-        } else {
-            const command = message.client.commands.get(args.join(" ").toLowerCase()) || message.client.commands.find(x => x.aliases && x.aliases.includes(args.join(" ").toLowerCase()));
-
-            if (!command) return message.channel.send(`${client.emotes.error} - I did not find this command !`);
-
-            message.channel.send({
-                embed: {
-                    color: '#ff0000',
-                    author: { name: 'Help pannel' },
-                    footer: { text: 'This  bot made by Noro Lex Studio (Noro Lex Studio Bot)' },
-                    fields: [
-                        { name: 'Name', value: command.name, inline: true },
-                        { name: 'Category', value: command.category, inline: true },
-                        { name: 'Aliase(s)', value: command.aliases.length < 1 ? 'None' : command.aliases.join(', '), inline: true },
-                        { name: 'Utilisation', value: command.utilisation.replace('{prefix}', client.config.discord.prefix), inline: true },
-                    ],
-                    timestamp: new Date(),
-                    description: 'Find information on the command provided.\nMandatory arguments `[]`, optional arguments `<>`.',
-                }
-            });
-        };
-    },
+    utilisation: '{prefix}help',
+	
+    async execute(client, message) {
+		
+		const fun = message.client.commands.filter(x => x.category == 'Fun').map((x) => '`' + x.name + '`').join(', ');
+        const giveaway = message.client.commands.filter(x => x.category == 'Giveaway').map((x) => '`' + x.name + '`').join(', ');
+        const economy = message.client.commands.filter(x => x.category == 'Economy').map((x) => '`' + x.name + '`').join(', ');
+        const moderation = message.client.commands.filter(x => x.category == 'Moderation').map((x) => '`' + x.name + '`').join(', ');
+        const music = message.client.commands.filter(x => x.category == 'Music').map((x) => '`' + x.name + '`').join(', ');
+		const botowner = message.client.commands.filter(x => x.category == 'Owner').map((x) => '`' + x.name + '`').join(', ');
+        const nsfw = message.client.commands.filter(x => x.category == 'Nsfw').map((x) => '`' + x.name + '`').join(', ');
+		
+        let embed0 = new MessageEmbed()
+			.setColor(`#ff0000`)
+            .setAuthor('Help pannel')
+			.addFields({ name: '**Fun**', value: fun })
+            .setFooter(client.language.INFO)
+            .setTimestamp(new Date())
+            .setDescription(`${client.emotes.success} - Support Server: https://discord.gg/FCJY3W5nBS`)
+        let embed1 = new MessageEmbed()
+			.setColor(`#ff0000`)
+            .setAuthor('Help pannel')
+			.addFields({ name: '**Giveaway**', value: giveaway })
+            .setFooter(client.language.INFO)
+            .setTimestamp(new Date())
+            .setDescription(`${client.emotes.success} - Support Server: https://discord.gg/FCJY3W5nBS`)
+		let embed2 = new MessageEmbed()
+			.setColor(`#ff0000`)
+            .setAuthor('Help pannel')
+			.addFields({ name: '**Economy**', value: economy })
+            .setFooter(client.language.INFO)
+            .setTimestamp(new Date())
+            .setDescription(`${client.emotes.success} - Support Server: https://discord.gg/FCJY3W5nBS`)
+		let embed4 = new MessageEmbed()
+			.setColor(`#ff0000`)
+            .setAuthor('Help pannel')
+			.addFields({ name: '**Moderation**', value: moderation })
+            .setFooter(client.language.INFO)
+            .setTimestamp(new Date())
+            .setDescription(`${client.emotes.success} - Support Server: https://discord.gg/FCJY3W5nBS`)
+		let embed5 = new MessageEmbed()
+			.setColor(`#ff0000`)
+            .setAuthor('Help pannel')
+			.addFields({ name: '**Music**', value: music })
+            .setFooter(client.language.INFO)
+            .setTimestamp(new Date())
+            .setDescription(`${client.emotes.success} - Support Server: https://discord.gg/FCJY3W5nBS`)
+		let embed6 = new MessageEmbed()
+			.setColor(`#ff0000`)
+            .setAuthor('Help pannel')
+			.addFields({ name: '**Bot Owner**', value: botowner })
+            .setFooter(client.language.INFO)
+            .setTimestamp(new Date())
+            .setDescription(`${client.emotes.success} - Support Server: https://discord.gg/FCJY3W5nBS`)
+        let embed7 = new MessageEmbed()
+			.setColor(`#ff0000`)
+            .setAuthor('Help pannel')
+			.addFields({ name: '**NSFW**', value: nsfw })
+            .setFooter(client.language.INFO)
+            .setTimestamp(new Date())
+            .setDescription(`${client.emotes.success} - Support Server: https://discord.gg/FCJY3W5nBS`)
+			
+        return message.channel.createSlider(message.author.id, [embed0, embed1, embed2, embed4, embed5, embed6, embed7], "➡", "⬅")
+    }
+	
 };

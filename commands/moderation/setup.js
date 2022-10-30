@@ -35,17 +35,6 @@ module.exports = {
         }).then(async channel => {
     })
         
-        				 message.guild.channels.create(`leave`, {
-            permissionOverwrites: [
-                {
-                    id: message.guild.roles.everyone,
-                    deny: ['SEND_MESSAGES'],
-                },
-            ],
-            type: 'text',
-        }).then(async channel => {
-    })
-        
         message.guild.roles.create({
         data: {
           name: "Muted",

@@ -1,0 +1,47 @@
+module.exports= {
+	
+	// SETLANG COMMAND //
+    SETLANG_ERR: "Please specifie a new language to choose",
+    SETLANG_SUCCESS:[
+        "Die Sprache ist jetzt Deutsch",
+        "The language is now english",
+    ],
+	
+    No_Owner: `You are not the owner of the bot`,
+	No_Prime: `the server has no prime`,
+	No_Permission: `[USER], You do not have permissions to use that command`,
+	Cat: `Random cat`,
+	Dog: `🤣WHAT A DOG🤣`,
+	MENTION_BOT: `I'm <name> and my prefix is \`<prefix>\``,
+	INFO: `This bot made by Noro Lex Studio (Noro Lex Studio Bot)`,
+	NSFW: `This channel is not an NSFW channel.`,
+	
+	joke1: `What rock group has four men that don't sing? Mount Rushmore.`,
+	joke2: `When I was a kid, my mother told me I could be anyone I wanted to be. Turns out, identity theft is a crime.`,
+	joke3: `A guy goes to his doctor because he can see into the future. The doctor asks him,"How long have you suffered from that condition?" The guy tells him, "Since next Monday."`,
+	joke4: `What do sprinters eat before a race? Nothing, they fast!`,
+	joke5: `What concert costs just 45 cents? 50 Cent featuring Nickelback!`,
+	joke6: `What do you call a mac 'n' cheese that gets all up in your face? Too close for comfort food!`,
+	joke7: `Why couldn't the bicycle stand up by itself? It was two tired!`,
+	joke8: `Did you hear about the restaurant on the moon? Great food, no atmosphere!`,
+	joke9: `How many apples grow on a tree? All of them!`,
+	joke10: `Did you hear the rumor about butter? Well, I'm not going to spread it!`,
+	joke11: `I like telling Dad jokes. Sometimes he laughs!`,
+	joke12: `To whoever stole my copy of Microsoft Office, I will find you. You have my Word!`,
+	joke13: `Dev1 How do you comfort a JavaScript bug? Dev2 You console it`,
+	joke14: `When a JavaScript date has gone bad, "Don\'t call me, I\'ll callback you. I promise!"`,
+	joke15: `Dev1 saw a strange JavaScript function & asked, "What is this?". Dev2 responded, "I don\'t know. I would\'ve called you, but I was in a bind"`,
+	joke16: `Dev1 Why was the JavaScript developer sad? Dev2 Because he didn't Node how to Express himself`,
+	joke17: `Dev1 Why did Jason cover himself with bubble wrap? Dev2 Because he wanted to make a cross-domain JSONP request`,
+	joke18: `Dev1 Why did the CoffeeScript developer keep getting lost? Dev2 Because he couldn't find his source without a map`,
+	joke19: `Dev1 Why did the developer go broke? Dev2 Because he used up all his cache`,
+	joke20: `Dev1 Why did the JavaScript boxer goto the chiropractor? Dev2 Because his backbone was angular from a knockout and required attention`,
+
+	Prime: `Prime:`,
+	LC: `Leave Channel:`,
+	LM: `Leave Message:`,
+	JC: `Join Channel:`,
+	JM: `Join Message:`,
+	JR: `Join Role:`,
+	Language: `Language:`,
+}

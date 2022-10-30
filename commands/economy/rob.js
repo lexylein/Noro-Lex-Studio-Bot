@@ -28,7 +28,7 @@ execute(client, message, args) {
   let moneymuliplyerx2 = 400;
     
   let embed3 = new Discord.MessageEmbed()
-   	.setDescription(`❌ You robbed ${user} and got away with ${moneymuliplyerx2} coins`)
+   	.setDescription(`❌ You robbed ${user} and got away with ${moneymuliplyerx2}$`)
    	.setColor("#ff0000")
   	db.subtract(`money_${message.guild.id}_${message.mentions.members.first().id}`, moneymuliplyerx2);
 	db.add(`money_${message.guild.id}_${message.author.id}`, moneymuliplyerx2);
@@ -43,7 +43,7 @@ execute(client, message, args) {
   let random = 200;
     
   let embed2 = new Discord.MessageEmbed()
-   	.setDescription(`❌ You robbed ${user} and got away with ${random} coins`)
+   	.setDescription(`❌ You robbed ${user} and got away with ${random}$`)
    	.setColor("#ff0000")
   	db.subtract(`money_${message.guild.id}_${message.mentions.members.first()}`, random);
 	db.add(`money_${message.guild.id}_${message.author.id}`, random);
@@ -90,7 +90,7 @@ if (author !== null && timeout - (Date.now() - author) > 0) {
 
     let moneyEmbed = new Discord.MessageEmbed()
   .setColor("#ff0000")
-  .setDescription(`❌ You need at least 200 coins in your wallet to rob someone`);
+  .setDescription(`❌ You need at least 200$ in your wallet to rob someone`);
 
 
   if (author2 < 200) {
@@ -114,7 +114,7 @@ if (author !== null && timeout - (Date.now() - author) > 0) {
   }
       
   let embed = new Discord.MessageEmbed()
-   	.setDescription(`❌ You robbed ${user} and got away with ${random} coins`)
+   	.setDescription(`❌ You robbed ${user} and got away with ${random}$`)
    	.setColor("#ff0000")
   	db.subtract(`money_${message.guild.id}_${message.mentions.members.first().id}`, random);
 	db.add(`money_${message.guild.id}_${message.author.id}`, random);
