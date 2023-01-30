@@ -8,7 +8,7 @@ module.exports = {
     category: 'Fun',
     utilisation: '{prefix}xp',
     
-	execute(bot, message, args) {
+	execute(client, message, bot, args) {
 		
 		let xpdb = db.fetch(`xp_${message.guild.id}_${message.author.id}`)
 		let xp = -1

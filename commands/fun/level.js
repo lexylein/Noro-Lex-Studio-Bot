@@ -4,11 +4,11 @@ const db = require("quick.db");
 
 module.exports = {
     name: 'level',
-    aliases: [],
+    aliases: ['lvl'],
     category: 'Fun',
     utilisation: '{prefix}level',
     
-	execute(bot, message, args) {
+	execute(client, message, bot, args) {
 		
 		let leveldb = db.fetch(`rank_${message.guild.id}_${message.author.id}`)
 		let level = 0
