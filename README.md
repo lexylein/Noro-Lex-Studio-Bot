@@ -10,6 +10,7 @@
  - jokes
  - cat/dog pictures
  - owner system
+ - multi language system
   
  **Support:**
  - Discord Server: https://discord.gg/GqT6fUt6z9
