@@ -1,15 +1,15 @@
 # Noro-Lex-Studio-Bot
  **funktions:**
- - music (ERROR)
- - moderation
- - economy
+ - music system (ERROR)
+ - moderation system
+ - economy system
+ - giveaway system
+ - NSFW system
  - youtube togehter (ERROR)
  - memes
  - jokes
  - cat/dog pictures
- - giveaway
- - owner commands
- - NSFW commands
+ - owner system
   
  **Support:**
  - Discord Server: https://discord.gg/GqT6fUt6z9
