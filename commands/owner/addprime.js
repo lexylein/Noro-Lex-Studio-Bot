@@ -6,11 +6,12 @@ module.exports = {
     aliases: ['addp'],
     category: 'Owner',
     utilisation: '{prefix}addprime',
-execute(client, message, args) {
+
+    execute(client, message, args) {
     
-    if(!message.author.id === "612589827262644234") return message.channel.send('you are not a Owner from the Bot');
+        if(!message.author.id === "612589827262644234") return message.channel.send(client.language.No_Owner);
+        db.set(`prime_${message.guild.id}`, 1)
+        message.channel.send(`Server wurde als Prime Server Hinzugefügt`)
 
-    db.set(`prime_${message.guild.id}`, 1)
-    message.channel.send(`Server wurde als Prime Server Hinzugefügt`)
-
-}};
+    }
+};
